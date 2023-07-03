@@ -26,10 +26,13 @@ function generatePassword (){
 
   if (Number.isNaN(passwordLength)) {
     alert(`Sorry, but that was not a number. Please try again :)`)
+    return;
   } else if (passwordLength < 8) {
   alert(`Sorry, but ${passwordLength} is less than 8. Please try again :)`)
+    return;
   } else if (passwordLength > 128) {
     alert(`Sorry, but ${passwordLength} is greater than 128. Please try again :)`)
+    return;
   } else if (passwordLength >= 8 && passwordLength <= 128) {
     alert(`Great! your password will have ${passwordLength} characters!`)
   }
